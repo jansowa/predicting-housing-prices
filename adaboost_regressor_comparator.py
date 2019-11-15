@@ -56,7 +56,7 @@ def calculate_min_error_for_adaboost_regressor(features_train, labels_train, fea
         print(parameters_string)
         print("Executing test time: " + str(executing_tests_time))
 
-    print("Best AdaBoostRegressor error: " + str(min_error) + " for n_estimators = " + str(
+    print("Minimum AdaBoostRegressor error: " + str(min_error) + " for n_estimators = " + str(
         n_estimators_with_min_error) + ", desion tree max depth = " + str(decision_tree_max_depth_with_min_error) +
           ", learning_rate = " + str(learning_rate_with_min_error))
 
