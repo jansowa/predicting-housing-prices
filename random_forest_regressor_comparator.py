@@ -56,6 +56,7 @@ def calculate_min_error_for_random_forest_regressor(features_train, labels_train
 
     print("Minimum RandomForestRegressor error: " + str(min_error) + " for n_estimators = " + str(n_estimators_with_min_error) + ", min_samples_leaf = " + str(min_samples_leaf_with_min_error)
           + ", min_weight_fraction_leaf = " + str(min_weight_fraction_leaf_with_min_error))
+    return min_error
 
 
 
