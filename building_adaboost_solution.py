@@ -14,12 +14,12 @@ test_X = pd.read_csv(test_data_path, index_col='Id')
 
 numerical_features = ['LotArea', 'YearBuilt', '1stFlrSF', '2ndFlrSF', 'FullBath', 'BedroomAbvGr', 'TotRmsAbvGrd',
                       'OverallQual', 'OverallCond', 'MSSubClass', 'YearRemodAdd']
-categorical_features = ['MSZoning', 'ExterQual', 'CentralAir', 'KitchenQual']
+categorical_features = ['MSZoning', 'CentralAir', 'KitchenQual', 'Neighborhood', 'Condition1', 'Heating']
 
 test_X.fillna({'KitchenQual': 'TA', 'MSZoning': 'RL'}, inplace=True)
 train_X, test_X = prepare_categorical_features(train_X, test_X, categorical_features, numerical_features)
 
-regressor = AdaBoostRegressor(n_estimators=26, base_estimator=DecisionTreeRegressor(max_depth=20), learning_rate=1.3)
+regressor = AdaBoostRegressor(n_estimators=26, base_estimator=DecisionTreeRegressor(max_depth=20), learning_rate=1.36)
 print("Fitting regressor...")
 regressor.fit(train_X, train_y)
 
